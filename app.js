@@ -1,11 +1,21 @@
+/*
+Integrantes: 
+
+		David Hugo Rivas Gutierrez 
+
+		Mauricio David Gordillo Herbas 
+
+		Fernando Rene Llusco Blanco 
+*/
 // Importar Express
 const express = require('express');
 const app = express();
 
+// Middleware para que Express pueda manejar JSON en las solicitudes y respuestas
 // Hacer que Express sepa que vamos a recibir y enviar JSON
 app.use(express.json());
 
-// Datos de prueba: un arreglo de objetos
+// Datos de prueba: un arreglo con usuarios iniciales
 let usuarios = [
     { id: 1, nombre: 'Juan', edad: 28 },
     { id: 2, nombre: 'Ana', edad: 22 },
@@ -13,6 +23,7 @@ let usuarios = [
 ];
 // Endpoint Inicial
 
+// Ruta principal de la API rest mensaje de bienvenida
 app.get('/', (req, res) => {
     res.send('Bienvenido a la API REST con Express.js');
 });
